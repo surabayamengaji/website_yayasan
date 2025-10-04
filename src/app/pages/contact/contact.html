@@ -1,0 +1,47 @@
+<div>
+  <p>contact works!</p>
+
+
+
+
+  <div class="theme-controls">
+    <app-button
+      [disabled]="false"
+      (action)="toggleTheme()">
+      Toggle Theme ({{ isDark() ? 'Dark' : 'Light' }})
+    </app-button>
+
+
+
+
+    <app-button
+      [disabled]="false"
+      (action)="setTheme('light')">
+      Light
+    </app-button>
+
+
+
+
+    <app-button
+      [disabled]="false"
+      (action)="setTheme('dark')">
+      Dark
+    </app-button>
+
+
+
+
+    <app-button
+      [disabled]="false"
+      (action)="setTheme('auto')">
+      Auto
+    </app-button>
+  </div>
+
+
+
+
+  <p>Current theme: {{ currentTheme() }}</p>
+  <p>Is dark: {{ isDark() }}</p>
+</div>

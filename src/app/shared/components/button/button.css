@@ -1,0 +1,70 @@
+/* button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--text-primary-light);
+
+  // efek timbul
+  box-shadow: 0 4px 0 var(--accent-shadow);
+
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: var(--accent-light);
+  }
+
+  &:active {
+    // sedikit turun biar kayak dipencet
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--accent-shadow);
+  }
+
+  &:disabled {
+    background: #ccc;
+    color: #666;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #080000;
+  }
+}
+.btn-primary {
+  background: #1976d2;
+  color: white;
+  box-shadow: 0 4px 0 var(--accent-shadow);
+
+  &:hover {
+    background: var(--accent-light);
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--accent-shadow);
+  }
+}
+
+.btn-secondary {
+  background: #e0e0e0;
+  color: #333;
+  box-shadow: 0 4px 0 #a0a0a0;
+
+  &:hover {
+    background: #d5d5d5;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #a0a0a0;
+  }
+} */
