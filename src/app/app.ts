@@ -4,10 +4,11 @@ import { Footers } from './shared/components/footers/footers';
 import { Donation } from './shared/components/donation/donation';
 import { News } from './shared/components/news/news';
 import { Report } from './shared/components/report/report';
+import { Achievement } from './shared/components/achievement/achievement';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footers, Donation, News, Report],
+  imports: [RouterOutlet, Footers, Donation, News, Report, Achievement],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

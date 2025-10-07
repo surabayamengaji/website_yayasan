@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0">
+    <title>Inverse Rounded Corner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #e5e5e5;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-container {
+            position: relative;
+            width: 560px;
+            height: 480px;
+            background: #7c3aed;
+            border-radius: 33px;
+        }
+
+        /* Badge box di kiri atas */
+        .badge-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: white;
+            padding: 24px 20px 25px 32px;
+            border-radius: 32px 0 32px 0;
+            z-index: 2;
+        }
+
+        .badge-box h2 {
+            font-size: 52px;
+            color: #7c3aed;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .badge-box p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        /* Inverse corner kanan dari badge */
+        .corner-badge-right {
+            position: absolute;
+            top: 0;
+            right: -32px;
+            width: 32px;
+            height: 32px;
+            background: #fff;
+        }
+
+        .corner-badge-right::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #7c3aed;
+            border-radius: 32px 0 0 0;
+            top: 0;
+            right: 0;
+        }
+
+        /* Inverse corner bawah dari badge */
+        .corner-badge-bottom {
+            position: absolute;
+            bottom: -32px;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: #fff;
+        }
+
+        .corner-badge-bottom::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #7c3aed;
+            border-radius: 32px 0 0 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* White box di kanan bawah */
+        .info-box {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: white;
+            padding: 28px 32px;
+            border-radius: 32px 0 32px 0;
+            z-index: 2;
+        }
+
+        .arrows {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 16px solid transparent;
+            border-right: 16px solid transparent;
+            border-bottom: 16px solid #fbbf24;
+        }
+
+        /* Inverse corner atas dari info box */
+        .corner-info-top {
+            position: absolute;
+            top: -32px;
+            right: 0;
+            width: 32px;
+            height: 32px;
+            background: #fff;
+        }
+
+        .corner-info-top::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #7c3aed;
+            border-radius: 0 0 32px 0;
+            top: 0;
+            right: 0;
+        }
+
+        /* Inverse corner kiri dari info box */
+        .corner-info-left {
+            position: absolute;
+            bottom: 0;
+            left: -32px;
+            width: 32px;
+            height: 32px;
+            background: #fff;
+        }
+
+        .corner-info-left::before {
+             content: '';
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: #7c3aed;
+            border-radius: 0 0 32px 0;
+            top: 0;
+            right: 0;
+        }
+
+        /* Info text */
+        .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            max-width: 350px;
+        }
+
+        .info h3 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .info p {
+            font-size: 15px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Badge Box -->
+      <div class="badge-box">
+        <h2>22+</h2>
+        <p>
+          Years Of
+          <br>
+          Experience
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Inverse corners untuk badge -->
+        <div class="corner-badge-right"></div>
+        <div class="corner-badge-bottom"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Info Box -->
+      <div class="info-box">
+        <div class="arrows">
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Inverse corners untuk info box -->
+        <div class="corner-info-top"></div>
+        <div class="corner-info-left"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Center Text -->
+      <div class="info">
+        <h3>Professional Design</h3>
+        <p>
+          Creating beautiful interfaces with attention to detail and modern techniques.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

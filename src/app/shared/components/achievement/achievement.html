@@ -1,0 +1,126 @@
+<div class="2xl:container 2xl:mx-auto 2xl:px-6 py-32">
+  <div class="max-w-7xl mx-auto px-6 space-y-12">
+    <div class="grid grid-cols-2 items-center gap-12">
+      <!-- Left Side - Stats and Image -->
+      <div class="relative col-span-2 lg:col-span-1 rounded-3xl overflow-hidden">
+        <!-- Years of Experience Badge -->
+        <div class="absolute top-0 left-0 z-10 bg-[#f7f7f7] px-8 py-6 rounded-tl-3xl rounded-br-3xl">
+          <div class="text-center animate-float">
+            <div class="text-5xl font-extrabold text-primary mb-2">5+</div>
+            <div class="text-gray-600 font-bold">Years Of<br>Experience</div>
+          </div>
+          <div class="absolute top-0 -right-8 w-8 h-8 bg-[#f7f7f7] before:content-[''] before:absolute before:w-8 before:h-8 before:bg-[#1C1321] before:rounded-tl-3xl before:top-0 before:right-0"></div>
+          <div class="absolute -bottom-8 left-0 w-8 h-8 bg-[#f7f7f7] before:content-[''] before:absolute before:w-8 before:h-8 before:bg-[#1C1321] before:rounded-tl-3xl before:bottom-0 before:left-0"></div>
+        </div>
+
+        <!-- Main Image Container -->
+        <div class="relative bg-[url('/bg-aja2.svg')] bg-cover bg-center rounded-[28px]">
+          <div class="w-full h-[500px]"></div>
+
+          <!-- Decorative arrows -->
+        </div>
+        <div class="absolute bottom-0 -right-0 flex z-10 flex-col space-y-2 bg-[#f7f7f7] px-16 py-6 rounded-tl-3xl rounded-br-3xl">
+          @for (arrow of arrows(); track $index) {
+            <div class="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[20px] border-b-primary animate-pulse"></div>
+          }
+          <div class="absolute -top-8 right-0 w-8 h-8 bg-[#f7f7f7] before:content-[''] before:absolute before:w-8 before:h-8 before:bg-[#1C1321] before:rounded-br-3xl before:top-0 before:right-0"></div>
+          <div class="absolute bottom-0 -left-8 w-8 h-8 bg-[#f7f7f7] before:content-[''] before:absolute before:w-8 before:h-8 before:bg-[#1C1321] before:rounded-br-3xl before:top-0 before:right-0"></div>
+        </div>
+      </div>
+
+      <!-- Right Side - Content -->
+      <div class=" col-span-2 lg:col-span-1 space-y-6">
+        <!-- About Us Badge -->
+        <div class="flex items-center gap-3">
+        <div class="relative h-[2px] w-16 bg-primary before:content-[''] before:absolute before:right-0 before:top-1/2 before:w-2 before:h-2 before:bg-primary before:transform before:-translate-y-1/2 before:rotate-45"></div>
+        <span class="text-primary capitalize text-4xl font-bold font-caveat tracking-wide">
+          Pencapaian Kami
+        </span>
+      </div>
+
+        <!-- Main Headline -->
+        <h2 class="text-4xl lg:text-5xl font-extrabold leading-tight font-nunito">
+              "Hasil Perjalanan Dakwah
+              <span class="font-extrabold text-primary text-shadow-ysmo">YSMO</span>"
+            </h2>
+
+        <!-- Description -->
+        <p class="text-gray-600 text-xl leading-relaxed">
+         <span class="font-extrabold">Alhamdulillah</span>, selama lebih dari lima tahun, Surabaya Mengaji terus melangkah dalam dakwah, pendidikan, sosial, dan multimedia.
+        </p>
+
+        <p class="text-gray-600 text-xl leading-relaxed">
+        Beragam program yang dijalankan telah memberi manfaat nyata bagi umat dan menjadi bukti tumbuhnya kebaikan dari waktu ke waktu.
+        </p>
+
+
+        <button   (click)="downloadCV()" class="bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-2">
+              Kontribusi Sekarang
+              <span>→</span>
+            </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+  <!-- Successful Projects -->
+  <div class="bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.12),0_0_8px_rgba(0,0,0,0.06)] transition-shadow duration-300 text-center">
+    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+      <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <div class="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-2">
+      {{ projectCount() }}+
+    </div>
+    <div class="text-gray-600 font-medium text-lg">
+      Anggota Grup Whatsapp
+    </div>
+  </div>
+
+  <!-- Happy Jamaah -->
+  <div class="bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.12),0_0_8px_rgba(0,0,0,0.06)] transition-shadow duration-300 text-center">
+    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+      <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"/>
+      </svg>
+    </div>
+    <div class="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-2">
+      {{ jamaahCount() }}+
+    </div>
+    <div class="text-gray-600 font-medium text-lg">
+      Penonton Youtube/Tahun
+    </div>
+  </div>
+
+  <!-- Media Active -->
+  <div class="bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.12),0_0_8px_rgba(0,0,0,0.06)] transition-shadow duration-300 text-center">
+    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+      <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+      </svg>
+    </div>
+    <div class="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-2">
+      {{ mediaCount() }}+
+    </div>
+    <div class="text-gray-600 font-medium text-lg">
+      Alumni Santri RQI
+    </div>
+  </div>
+
+  <!-- Years Experience -->
+  <div class="bg-white rounded-2xl p-8 shadow-[0_4px_12px_rgba(0,0,0,0.12),0_0_8px_rgba(0,0,0,0.06)] transition-shadow duration-300 text-center">
+    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+      <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+      </svg>
+    </div>
+    <div class="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-2">
+      {{ experienceYears() }}+
+    </div>
+    <div class="text-gray-600 font-medium text-lg">
+      Eksemplar Buletin/Bulan
+    </div>
+  </div>
+</div>
+  </div>
+</div>
